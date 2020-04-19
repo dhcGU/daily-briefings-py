@@ -5,14 +5,14 @@ from dotenv import load_dotenv
 from datetime import date
 #from pprint import pprint
 
-from app import APP_ENV
+#from app import APP_ENV
 from app.weather_service import get_hourly_forecasts
 from app.email_service import send_email
 
 load_dotenv()
 
 MY_NAME = os.getenv("MY_NAME", default="Player 1")
-
+APP_ENV = os.getenv("APP_ENV")
 if __name__ == "__main__":
 
     if APP_ENV == "development":
